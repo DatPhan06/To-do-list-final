@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/app.css">
+
+<div class="container">
+  <div class="col col-lg-4">
+
+    <div class="form-input">
+      <header>
+        <h1>To Do List App
+          <img src="https://media.giphy.com/media/0mby9MpRJJlP0WoBT3/giphy.gif" alt="gif vui vui" class="image">
+        </h1>
+      </header>
+
+      <form action="/task/add" method="POST">
+        <input type="text" name="title" class="todo-input" id="todo-input" placeholder="Title"></input>
+        <input type="text" name="description" class="todo-input" id="todo-input" placeholder="Description"></input>
+        <button class="todo-button" href="/" type="submit">
+          <i class="fas fa-plus-circle fa-lg"></i>
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+
+  <div class="col col-lg-12">
+    <div class="list">
+      <div class="text">Today's Tasks</div>
+      <div class="todo-container">
+        <ul class="todo-list" id="todo-list">
+          <div class="mt-2">
+            <div class="row">
+
+              {{#each data}}
+              <div class="col-sm-12 col-lg-12">
+                <div class="card card-course-item">
+                  <div class="card-body">
+                    <a href="/">
+                      <h5 class="card-title">{{this.title}}</h5>
+                      <p class="card-text">{{this.description}}</p>
+                      <form action="/task/{{this.id}}?_method=DELETE" method="POST">
+                        <button class="btn btn-primary">Xóa</button>
+                      </form>
+                      <form action="/task/{{this.id}}?_method=PUT" method="POST">
+                        <button class="btn btn-primary">
+                          {{#if this.Completed}}
+                          Hoàn thành
+                          {{else}}
+                          Chưa hoàn thành
+                          {{/if}}
+                        </button>
+                      </form>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {{/each}}
+            </div>
+          </div>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
