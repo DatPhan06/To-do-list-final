@@ -1,0 +1,44 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a background image to the entire page */
+body {
+    background-image: url('../../public/img/background.jpg');
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    text-align: center; /* Căn giữa nội dung trong trang */
+}
+
+/* Style the header with the background color, text color, and center-aligned text */
+h1 {
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style the buttons with background color, padding, and margin */
+form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Change button background color on hover */
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Display buttons on the same line */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

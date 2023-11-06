@@ -10,8 +10,12 @@ const route = require("./routes");
 const mysql = require("mysql2");
 const { sequelize } = require("./sequelize");
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
 
 dotenv.config({ path: "./.env" });
+
+// Sử dụng cookie-parser middleware
+app.use(cookieParser());
 
 //Sử dụng tài nguyên tĩnh từ thư mục "public"
 app.use(express.static(path.join(__dirname, "public")));

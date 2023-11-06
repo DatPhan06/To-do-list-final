@@ -7,7 +7,7 @@ class TaskController {
     try {
       const { title, description, completed } = req.body;
       await Task.create({ title, description, completed });
-      res.redirect("/");
+      res.redirect("/home");
     } catch (err) {
       console.error(err);
       res.json({ error: "Lỗi khi tạo công việc mới" });
@@ -23,7 +23,7 @@ class TaskController {
         return res.json({ error: "Không tìm thấy công việc" });
       }
       await task.destroy();
-      res.redirect("/");
+      res.redirect("/home");
     } catch (err) {
       console.error(err);
       res.json({ error: "Lỗi khi xóa công việc" });
@@ -38,7 +38,7 @@ class TaskController {
         return res.status(404).json({ error: "Không tìm thấy công việc" });
       }
       await task.update({ Completed: !task.Completed });
-      res.redirect("/");
+      res.redirect("/home");
     } catch (err) {
       console.error(err);
       res.json({ error: "Lỗi khi cập nhật công việc" });
