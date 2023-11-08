@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html>
+<link rel="stylesheet" href="/css/welcome.css">
 
-<head>
-    <link rel="stylesheet" href="/css/homecss.css">
-</head>
+<div class="button-container">
+    <form action="/auth/register" method="GET">
+        <button>Register</button>
+    </form>
 
-<body>
-    <h1>Hello xin chào các bạn</h1>
-    <div class="button-container">
-        <form action="/auth/register" method="GET">
-            <button>Register</button>
-        </form>
-
-        <form action="/auth/login" method="GET">
-            <button>Login</button>
-        </form>
-    </div>
-</body>
-
-</html>
+    <form action="/auth/login" method="GET">
+        <button>Login</button>
+    </form>
+</div>

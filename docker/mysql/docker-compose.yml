@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  app:
+    
+
+  db:
+    image: mysql:8.0
+    restart: alway
+    environment:
+      - MYSQL_DATABASE=todo_db
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_ROOT_PASSWORD=
+    ports:
+      - "3306:3306" # Điều chỉnh cổng tùy ý
+    
+
+ 

@@ -1,6 +1,8 @@
 const { sequelize, DataTypes } = require("./../../sequelize"); // Import cấu hình từ tệp sequelize.js
 const Task = require("../models/Task")(sequelize, DataTypes);
 
+const authenticateJWT = require("../../authenticateJWT");
+
 class SiteController {
   // [GET] /home
   static async home(req, res) {
@@ -19,7 +21,9 @@ class SiteController {
   }
 
   static async welcome(req, res) {
-    res.render("welcome");
+    if (req.cookies.token == null) {
+      res.render("welcome");
+    } else res.redirect("/home");
   }
 }
 

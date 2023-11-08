@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&family=Poppins:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playpen Sans';
+}
+
+
+/* Apply a background image to the entire page */
+.register-container {
+    min-height: 100vh;
+    background-image: url('/img/register_page.png');
+    
+}
+
+form {
+    color: whitesmoke;
+    margin-left: 9%;
+    position: relative;
+    top:30vh;
+    margin-right: 75%;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    
+}

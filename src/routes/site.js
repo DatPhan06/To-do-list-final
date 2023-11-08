@@ -6,6 +6,7 @@ const SiteController = require("../app/controllers/SiteController");
 
 // router.get("/add", SiteController.add);
 router.get("/home", authenticateJWT, SiteController.home);
+
 router.get("/", SiteController.welcome);
 
 module.exports = router;

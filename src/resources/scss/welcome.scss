@@ -1,32 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&family=Poppins:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+
 /* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Playpen Sans';
 }
 
 /* Apply a background image to the entire page */
 body {
-    background-image: url('../../public/img/background.jpg');
+    
+    background-color: #2980b9;
+    background-image: url('/img/background.png');
     background-size: cover;
     font-family: Arial, sans-serif;
-    text-align: center; /* Căn giữa nội dung trong trang */
-}
-
-/* Style the header with the background color, text color, and center-aligned text */
-h1 {
-    color: #fff;
-    padding: 20px;
+    
 }
 
 /* Style the buttons with background color, padding, and margin */
 form button {
     background-color: #3498db;
+    position: relative;
+    right: 50%;
     color: #fff;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     margin: 10px;
+    margin-left: 30px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
@@ -39,6 +42,9 @@ form button:hover {
 /* Display buttons on the same line */
 .button-container {
     display: flex;
-    justify-content: center;
+    justify-content:right;
+    position:absolute;
+    right: 18%;
+    bottom: 40%;
     align-items: center;
 }

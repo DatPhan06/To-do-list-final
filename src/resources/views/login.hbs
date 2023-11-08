@@ -1,15 +1,21 @@
-<form action="/auth/login" method="POST">
-    <div class="form-group">
-        <label for="username">username</label>
-        <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
-    </div>
-    <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" name="password">
-    </div>
-    <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Save Password</label>
-    </div>
-    <button type="login-submit" class="btn btn-primary">Login</button>
-</form>
+<link rel="stylesheet" href="/css/login.css">
+
+
+<div class="login-container">
+
+    <form action="/auth/login" method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Save Password</label>
+        </div>
+        <button type="login-submit" class="btn btn-primary">Login</button>
+    </form>
+</div>

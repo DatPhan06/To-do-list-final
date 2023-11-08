@@ -50,7 +50,6 @@ class AuthController {
   }
 
   static async resultregister(req, res) {
-    console.log(req.body);
     try {
       const { username, password, passwordconfirm } = req.body;
       if (password !== passwordconfirm) {
@@ -65,6 +64,11 @@ class AuthController {
       console.error(err);
       return res.status(500).json({ error: "Lỗi khi tạo tài khoản mới" });
     }
+  }
+
+  static async resultLogout(req, res) {
+    res.clearCookie("token");
+    res.redirect("/");
   }
 }
 module.exports = AuthController;
