@@ -21,9 +21,7 @@ class SiteController {
   }
 
   static async welcome(req, res) {
-    if (req.cookies.token == null) {
-      res.render("welcome");
-    } else res.redirect("/home");
+    res.render("welcome");
   }
 }
 

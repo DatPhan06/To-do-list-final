@@ -1,20 +1,18 @@
+require("dotenv").config({ path: "./src/.env" });
+
 const path = require("path");
 const express = require("express");
-var methodOverride = require("method-override");
+const methodOverride = require("method-override");
 const morgan = require("morgan");
 const { engine } = require("express-handlebars");
 const handlebarsHelpers = require("handlebars-helpers")();
 const app = express();
-const port = 3000;
-const hostname = "localhost";
+const port = process.env.PORT || 3000;
 const route = require("./routes");
 const mysql = require("mysql2");
 const { sequelize } = require("./sequelize");
-const dotenv = require("dotenv");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-
-dotenv.config({ path: "./.env" });
 
 // Sử dụng cookie-parser middleware
 app.use(cookieParser());
@@ -52,6 +50,6 @@ app.set("views", path.join(__dirname, "resources", "views"));
 //Routes init
 route(app);
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
